@@ -1,26 +1,48 @@
-<?php include __DIR__ . '/Models/Products.php';
+<?php
+include __DIR__ . '/Models/Products.php';
+include_once __DIR__ . '/Models/Cani.php';
+include_once __DIR__ . '/Models/Gatti.php';
 
-$dogFood = [
-    new Products(
+$objects = [
+    new Cani(
         "Akita Crock",
-        "Cani",
-        "Cibo",
+        "x",
+        Cibo::class,
         "21,99€"
     ),
 
-    new Products(
-        "Pitbull Gum",
-        "Cani",
-        "Cibo",
-        "43,99€"
+    new Cani(
+        "Osso finto",
+        "x",
+        Giochi::class,
+        "3,99€"
     ),
 
-    new Products(
-        "Golden steak",
-        "Cani",
-        "Cibo",
-        "11,99€"
+    new Cani(
+        "Cuccia rotonda",
+        "x",
+        Cucce::class,
+        "61,99€"
+    ),
+
+    new Gatti(
+        "Tonno per gatti",
+        "x",
+        Cibo::class,
+        "21,99€"
+    ),
+
+    new Gatti(
+        "Gomitolo di Lana",
+        "x",
+        Giochi::class,
+        "3,99€"
+    ),
+
+    new Gatti(
+        "Cuccia rotonda",
+        "x",
+        Cucce::class,
+        "61,99€"
     ),
 ];
-
-

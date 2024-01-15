@@ -1,5 +1,5 @@
 <?php
-
+include_once __DIR__ . '/Cani.php';
 class Products
 {
     public $productName;
@@ -14,5 +14,10 @@ class Products
         $this->category = $category;
         $this->type = $type;
         $this->price = $price;
+    }
+
+    public function getName()
+    {
+        return $this->category;
     }
 }

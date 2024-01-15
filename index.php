@@ -16,14 +16,14 @@ include __DIR__ . '/data.php';
     <div class="container mt-4">
 
         <div class="row">
-            <?php foreach ($dogFood as $food) { ?>
+            <?php foreach ($objects as $object) { ?>
                 <div class="col-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title"><?= "Nome prodotto: " . $food->productName ?></h5>
-                            <p class="card-text"><?= "Categoria: " . $food->category ?></p>
-                            <p class="card-text"><?= "Tipo: " . $food->type ?></p>
-                            <p class="card-text"><?= "Prezzo: " . $food->price ?></p>
+                            <h5 class="card-title"><?= "Nome prodotto: " . $object->productName ?></h5>
+                            <p class="card-text"><?= "Categoria: " . get_class($object) ?></p>
+                            <p class="card-text"><?= "Tipo: " . $object->type ?></p>
+                            <p class="card-text"><?= "Prezzo: " . $object->price ?></p>
                         </div>
                     </div>
                 </div>
