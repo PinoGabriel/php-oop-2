@@ -17,7 +17,7 @@ include __DIR__ . '/data.php';
 
         <div class="row">
             <?php foreach ($objects as $object) { ?>
-                <div class="col-4">
+                <div class="col-4 mb-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title"><?= "Nome prodotto: " . $object->productName ?></h5>
