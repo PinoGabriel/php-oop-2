@@ -20,10 +20,21 @@ include __DIR__ . '/data.php';
                 <div class="col-4 mb-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title"><?= "Nome prodotto: " . $object->productName ?></h5>
-                            <p class="card-text"><?= "Categoria: " . get_class($object) ?></p>
-                            <p class="card-text"><?= "Tipo: " . $object->type ?></p>
+                            <img class="card-img d-flex justify-content-center pb-4" src="<?= $object->image ?>" alt="">
+                            <h5 class="card-title pb-3"><?= "Nome prodotto: " . $object->productName ?></h5>
+                            <p class="card-text"><?= "Categoria: " . $object->category->name ?></p>
+                            <p class="card-text"><?= "Tipo: " . get_class($object) ?></p>
                             <p class="card-text"><?= "Prezzo: " . $object->price ?></p>
+                            <p class="card-text"><?php
+                                                    if ($object instanceof Cucce) {
+                                                        echo "Dimensioni: " . $object->size;
+                                                    } ?>
+                            </p>
+                            <p class="card-text"><?php
+                                                    if ($object instanceof Cucce) {
+                                                        echo "Colore: " . $object->color;
+                                                    } ?>
+                            </p>
                         </div>
                     </div>
                 </div>
