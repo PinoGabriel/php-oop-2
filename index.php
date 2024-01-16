@@ -28,6 +28,10 @@ include __DIR__ . '/data.php';
                             <p class="card-text"><?php
                                                     if ($object instanceof Cucce) {
                                                         echo "Dimensioni: " . $object->size;
+                                                    } else if ($object instanceof Giochi) {
+                                                        echo "Tessuto: " . $object->texture;
+                                                    } elseif ($object instanceof Cibo) {
+                                                        echo "Peso: " . $object->weight . "g";
                                                     } ?>
                             </p>
                             <p class="card-text"><?php

@@ -13,14 +13,16 @@ $objects = [
         "https://rawznaturalpetfood.com/wp-content/uploads/RAWZ_Dog_96_Beef_can_web.png",
         "Akita Crock",
         $cani,
-        "21,99€"
+        "21,99€",
+        354
     ),
 
     new Giochi(
         "https://www.amicisulserio.it/images/virtuemart/product/resized/GIOCO_BAM_BONES__5b0e29b13eec8_450x450.png",
         "Osso finto",
         $cani,
-        "3,99€"
+        "3,99€",
+        "Plastica"
     ),
 
     new Cucce(
@@ -36,14 +38,16 @@ $objects = [
         "https://www.progettopet.it/ecommerce/it/gatto/alimentazione-specifica-adulti/c2715/1_Animonda-Carny-Drink-Gatti-Tonno-per-GATTI-4017721835923MA-formato-confezione.jpg-rid-1120.png",
         "Tonno per gatti",
         $gatti,
-        "21,99€"
+        "21,99€",
+        140,
     ),
 
     new Giochi(
         "https://media.istockphoto.com/id/1312084086/it/foto/morbido-filato-di-lana-blu-isolato-su-bianco-vista-dallalto.jpg?s=612x612&w=0&k=20&c=xMARi00VlLtsbYrPH5whKf9Ck4dolq5AGYLqb4b_lqE=",
         "Gomitolo di Lana",
         $gatti,
-        "3,99€"
+        "3,99€",
+        "Lana"
     ),
 
     new Cucce(
