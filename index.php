@@ -26,9 +26,9 @@ include __DIR__ . '/data.php';
                             <p class="card-text"><?= "Tipo: " . get_class($object) ?></p>
                             <p class="card-text"><?php if ($object->user->log == "registrato") {
                                                         $discountedPrice = number_format($object->price * 0.8, 2);
-                                                        echo "Prezzo scontato: " . $discountedPrice . "€ <b>(Cliente: " . $object->user->log . ")</b>";
+                                                        echo "Prezzo scontato: " . $discountedPrice . "€ <b>(User: " . $object->user->log . ")</b>";
                                                     } else {
-                                                        echo "Prezzo: " . number_format($object->price, 2) . "€ <b>(Cliente: " . $object->user->log . ")</b>";
+                                                        echo "Prezzo: " . number_format($object->price, 2) . "€ <b>(User: " . $object->user->log . ")</b>";
                                                     } ?>
                             </p>
                             <p class="card-text"><?php
