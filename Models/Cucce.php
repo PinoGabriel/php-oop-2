@@ -5,9 +5,9 @@ class Cucce extends Products
     public $size;
     public $color;
 
-    public function __construct($image, $productName, Category $category, $price, $size, $color)
+    public function __construct($image, $productName, Category $category, $price, User $user, $size, $color)
     {
-        parent::__construct($image, $productName, $category, $price);
+        parent::__construct($image, $productName, $category, $price, $user);
         $this->size = $size;
         $this->color = $color;
     }

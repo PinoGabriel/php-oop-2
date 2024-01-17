@@ -21,10 +21,17 @@ include __DIR__ . '/data.php';
                     <div class="card">
                         <div class="card-body">
                             <img class="card-img d-flex justify-content-center pb-4" src="<?= $object->image ?>" alt="">
+                            <h6 class="card-title pb-3"><?= "Cliente: " . $object->user->log ?></h6>
                             <h5 class="card-title pb-3"><?= "Nome prodotto: " . $object->productName ?></h5>
                             <p class="card-text"><?= "Categoria: " . $object->category->name ?></p>
                             <p class="card-text"><?= "Tipo: " . get_class($object) ?></p>
-                            <p class="card-text"><?= "Prezzo: " . $object->price ?></p>
+                            <p class="card-text"><?php if ($object->user->log == "registrato") {
+                                                        $discountedPrice = number_format($object->price * 0.8, 2);
+                                                        echo "Prezzo scontato: " . $discountedPrice . "€";
+                                                    } else {
+                                                        echo "Prezzo: " . number_format($object->price, 2) . "€";
+                                                    } ?>
+                            </p>
                             <p class="card-text"><?php
                                                     if ($object instanceof Cucce) {
                                                         echo "Dimensioni: " . $object->size;

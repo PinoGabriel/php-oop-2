@@ -4,9 +4,9 @@ class Giochi extends Products
 {
     public $texture;
 
-    public function __construct($image, $productName, Category $category, $price, $texture)
+    public function __construct($image, $productName, Category $category, $price, User $user, $texture)
     {
-        parent::__construct($image, $productName, $category, $price);
+        parent::__construct($image, $productName, $category, $price, $user);
         $this->texture = $texture;
     }
 }
